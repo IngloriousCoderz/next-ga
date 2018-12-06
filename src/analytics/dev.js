@@ -1,25 +1,23 @@
-import debug from "debug";
+import debug from 'debug'
 
-const log = debug("analytics");
+const log = debug('analytics')
 
 export function init(code) {
-  log(`Analytics init triggered for ${code}`);
+  log(`Analytics init triggered for ${code}`)
 }
 
 export function pageview() {
-  log(`Pageview triggered for ${window.location.pathname}`);
+  log(`Pageview triggered for ${window.location.pathname}`)
 }
 
-export function event(category = "", action = "") {
-  log(
-    `Event for category ${category} and action ${action} triggered`
-  );
+export function event(category = '', action = '') {
+  log(`Event for category ${category} and action ${action} triggered`)
 }
 
-export function exception(description = "", fatal = false) {
+export function exception(description = '', fatal = false) {
   log(
     `${
-      fatal ? "Fatal exception" : "Exception"
-    } with description ${description}`
-  );
+      fatal ? 'Fatal exception' : 'Exception'
+    } with description ${description}`,
+  )
 }
